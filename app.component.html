@@ -1,0 +1,16 @@
+<body>
+    <div id="space">
+        <div><h1 style = "color:white;"><span><i id = "icon" class="fas fa-cloud"></i></span> Weather</h1>
+            <p id="dateTime">{{this.currentDate}}</p>
+        </div>
+        <ul class="nav navbar nav-tabs line">
+            <li role="presentation" routerLinkActive=" customActive" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/" style = "color:white;" >HOME</a></li>
+            <li role="presentation" routerLinkActive="customActive"><a routerLink="/favourite" style = "color:white;">FAVOURITE</a></li>
+            <li role="presentation" routerLinkActive="customActive"><a routerLink="/recentSearch" style = "color:white;">RECENT SEARCH</a></li>
+        </ul>
+        <router-outlet></router-outlet>
+    </div>
+</body>
+
+
+

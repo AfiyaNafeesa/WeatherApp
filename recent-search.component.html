@@ -1,0 +1,25 @@
+<section *ngIf="weatherSearch.length !=0">
+    <div class="card-table">
+        <div class="container">
+            <table class="table table-reponsive">
+                <tbody>
+                    <p>You recently searched for</p>
+                    <P><button class="btn rem" (click)="removeAll()">Remove All</button></P>
+                    <tr *ngFor = "let search of weatherSearch; let i = index">
+                        <td style = "width: 30%;">{{search.name}},{{search.sys.country}}</td>
+                        <td style ="width:10%;" ><img id ="wicon" src="http://openweathermap.org/img/wn/{{search.weather[0].icon}}@2x.png"></td>
+                        <td style="width: 10%;">{{search.main.temp}} °C</td>
+                        <td style = "width: 25%;">{{search.weather[0].description}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>  
+</section>
+
+<section *ngIf="weatherSearch.length ==0">
+    <div class="container">
+        <span ><i id="img" class="fas fa-dizzy fa-4x"></i></span>
+        <h6 id="sentence"> No Recent Search </h6>
+    </div>
+</section>

@@ -1,0 +1,21 @@
+<body>
+  <div class="input-group">
+      <input type="search" class="form-control transparent " #userInput placeholder="Search City"   >
+      <button type="button" class="btn btn-primary transparent search" (click)="getCity(userInput.value)"><span><i class="fas fa-search"></i></span></button>
+  </div>
+  
+  <h2 id = "place">{{weatherData?.name}}, {{weatherData?.sys.country}}</h2> <br>
+  <button class="btn transparent favbtn" (click)="addToFavList(weatherData)" ><span><i class="far fa-heart"></i></span> Add to Favourite</button>
+  <img class="fa-5x weatherIcon" src="http://openweathermap.org/img/wn/{{weatherData?.weather[0].icon}}@2x.png">
+  <h1 id = "temp">{{weatherData?.main.temp}} °C</h1>
+  <p id ="desc"> {{weatherData?.weather[0].description}}</p><br><br>
+  <div class="line"></div>
+    <ul>
+      <li>Min-Max <br>{{ weatherData?.main.temp_min}}°-{{ weatherData?.main.temp_max}}°</li>
+      <li>Pressure <br> {{ weatherData?.main.pressure}}hPa</li>
+      <li>Humidity<br>{{ weatherData?.main.humidity}}%</li>
+      <li>Wind<br>{{weatherData?.wind.speed}}mph</li>
+      <li>Visibility<br>{{ weatherData?.visibility}}mph</li>
+    </ul>
+</body>
+

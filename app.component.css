@@ -1,0 +1,48 @@
+body{
+    background: linear-gradient(to right, rgba(136,81,204,0.68) 0%, rgb(132, 138, 216) 20%, rgb(187, 112, 187) 65%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-top: 5%;  
+}
+
+#icon{
+    height: 29.76px;
+    width: 44.16px;
+    background: linear-gradient(145.43deg, #FAD961 0%, #F76B1C 100%);
+}
+
+#space{
+    margin-left: 5%;
+}
+
+#dateTime{
+    margin-left: 65% !important;
+    color: white;
+}
+
+.line {
+    height: 5px;
+    width: 1155px;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+body ul li:hover{
+    background-color: #5555 !important;
+}
+
+.customActive {
+    background: transparent !important;
+    color: yellow !important;
+    border-bottom: 2px solid yellow !important;
+    border-radius: 0px !important;
+}
+
+@media screen and (max-width: 414px) {
+    body{
+        background-repeat: no-repeat !important;
+        background-size: cover;
+        margin-left: 0%;
+    }
+
+}
+

@@ -1,0 +1,32 @@
+<section *ngIf="weatherInfo.length !=0">
+    <div class="card-table">
+        <div class="container">
+            <table class="table table-reponsive">
+                <tbody>
+                    <p>{{total}} City added as favourite</p>
+                    <P><button class="btn rem" (click)="removeAll()">Remove All</button></P>
+                    
+                    <tr *ngFor = "let item of weatherInfo; let i = index">
+                        <td style = "width: 30%;">{{item.name}},{{item.sys.country}}</td>
+                        <td style ="width:10%;" ><img id ="wicon" src="http://openweathermap.org/img/wn/{{item.weather[0].icon}}@2x.png"></td>
+                        <td style="width: 10%;">{{item.main.temp}} °C</td>
+                        <td style = "width: 25%;">{{item.weather[0].description}}</td>
+                        <button (click)="removeItem(item)" class ="btn heart "><span><i class="fas fa-heart"></i></span></button>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>   
+</section>
+
+<section *ngIf="weatherInfo.length == 0">
+    <div class="container">
+        <span ><i id="img" class="fas fa-dizzy fa-4x"></i></span>
+        <h6 id="sentence"> No Favourites added </h6>
+    </div>
+</section>
+
+
+
+
+

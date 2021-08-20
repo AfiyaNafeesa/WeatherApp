@@ -1,0 +1,41 @@
+section {
+    color: white;
+    background: transparent;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#img{
+    position: absolute;
+    top: 50%;
+    margin-left: 36%;
+}
+
+#sentence{
+    position: absolute;
+    top: 60%;
+    left: 41%;
+}
+
+#wicon{
+    height:40%;
+    width:40%;
+}
+
+.card-table{
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: none;
+    word-wrap: none;
+    background-clip: border-box;
+    border: 1px solid rgba(f,f,f,0.1);
+}
+
+.rem{
+    color:white;
+    border: 1px solid rgba(230, 228, 228, 0.5) !important;
+    background-color: transparent !important;
+    margin-left: 170%;
+}
